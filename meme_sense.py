@@ -1,3 +1,7 @@
+"""
+Finetuning MovileNetV2 to distiguish between an religious image and not an religious image.
+"""
+
 from keras.models import Sequential
 from keras.layers import Dropout, Flatten, Dense
 from keras.optimizers import SGD
@@ -40,8 +44,7 @@ top_model.add(Dense(1, activation='sigmoid'))
 
 
 
-top_model.compile(loss='binary_crossentropy', optimizer=SGD(lr=1e-4, momentum=0.9),
-              metrics=['accuracy'])
+top_model.compile(loss='binary_crossentropy', optimizer=SGD(lr=1e-4, momentum=0.9), metrics=['accuracy'])
 top_model.summary()
 
 
