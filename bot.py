@@ -36,14 +36,14 @@ def main():
                 p = model.predict(img)
                 print("Model output: ", p)
                 if p > 0.5:
-                    vk.messages.send(chat_id=event.chat_id, message="This is an religious image", random_id= event.obj.random_id)
+                    vk.messages.send(chat_id=event.chat_id, message="Warning! This is a religious image", random_id= event.obj.random_id)
 
                     text, label = meme_info(img1)
                     if len(text)>0:
-                        vk.messages.send(chat_id=event.chat_id, message="Oh man, this is Looks like a meme!",
+                        vk.messages.send(chat_id=event.chat_id, message="Oh man, this is looks like a meme!",
                                          random_id= event.obj.random_id)
                 else:
-                    vk.messages.send(chat_id=event.chat_id, message="Definitely not an religious image",
+                    vk.messages.send(chat_id=event.chat_id, message="Definitely not a religious image",
                                      random_id= event.obj.random_id)
 
 
